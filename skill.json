@@ -1,0 +1,27 @@
+{
+  "name": "genpark-personal-agent-blood-pressure-dipping-hemodynamics-skill",
+  "version": "1.0.0",
+  "description": "Calculates ABPM nocturnal blood pressure dipping percentage, Mean Arterial Pressure (MAP), Pulse Pressure (PP), and evaluates orthostatic hemodynamics.",
+  "tools": [
+    {
+      "name": "calculate_nocturnal_bp_dipping_profile",
+      "description": "Calculates nocturnal systolic dipping percentage, Mean Arterial Pressure (MAP), and phenotype.",
+      "parameters": {
+        "daytime_sbp_mean": "float (default 124.0)",
+        "daytime_dbp_mean": "float (default 78.0)",
+        "nighttime_sbp_mean": "float (default 108.0)",
+        "nighttime_dbp_mean": "float (default 66.0)"
+      }
+    },
+    {
+      "name": "evaluate_orthostatic_hemodynamics",
+      "description": "Evaluates Orthostatic Hypotension (OH) or Orthostatic Hypertension across 3 minutes standing.",
+      "parameters": {
+        "supine_sbp": "float (default 120.0)",
+        "supine_dbp": "float (default 76.0)",
+        "standing_3min_sbp": "float (default 114.0)",
+        "standing_3min_dbp": "float (default 78.0)"
+      }
+    }
+  ]
+}
